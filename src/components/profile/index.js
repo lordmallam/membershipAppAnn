@@ -30,8 +30,8 @@ class Profile extends Component {
     }
 
     componentWillReceiveProps(newProps) {
-        if(newProps.member._attachments['profile-pic.png'].data 
-        && newProps.member._attachments['profile-pic.png'].data !== this.props.member._attachments['profile-pic.png'].data) {
+        if(newProps.member._attachments && newProps.member._attachments['profile-pic.png'] &&
+        newProps.member._attachments['profile-pic.png'].data) {
             const imageProcessed = newProps.member._attachments['profile-pic.png'].data
             this.getProfilePic(imageProcessed);
         }
@@ -117,7 +117,7 @@ getProfilePic = img => {
                 <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#3a6a75', alignSelf: 'center', marginTop: 20}}>
                 {this.props.member.firstname} {this.props.member.surname}</Text>
                 <Text style={{ fontSize: 15, alignSelf: 'center', marginTop: 5}}>
-                {this.props.member.phone}</Text>
+                {this.props.member.memberId}</Text>
                 <View style={{ paddingTop: 10, paddingBottom: 10, margin: 20,
                 backgroundColor: '#fff', borderRadius: 10}}>
                 <View style={{ flexDirection: 'row', padding: 10, paddingLeft: 15, borderColor: '#eee', borderBottomWidth: 1}}>
@@ -139,6 +139,10 @@ getProfilePic = img => {
                 <View style={{ flexDirection: 'row', padding: 10, paddingLeft: 15 }}>
                     <Text style={{color: '#69abd0', flex: 2}}>Address:</Text>
                     <Text style={{ flex: 3}}>{this.props.member.residenceAddress}</Text>
+                </View>
+                <View style={{ flexDirection: 'row', padding: 10, paddingLeft: 15 }}>
+                    <Text style={{color: '#69abd0', flex: 2}}>Phone:</Text>
+                    <Text style={{ flex: 3}}>{this.props.member.phone}</Text>
                 </View>
                 </View>
                 <View>

@@ -37,7 +37,6 @@ class TakePic extends Component {
                 .catch(err => console.log(err))
                 Actions.pop();
             } catch (error) {
-                console.log(error);
                 ToastAndroid.showWithGravity('An error occured while taking the picture.', 
             ToastAndroid.SHORT, ToastAndroid.BOTTOM);
             }

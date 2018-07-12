@@ -16,7 +16,7 @@ class MainMenu extends Component {
 
     onContact() {
         this.refs[this.props.id].closeDrawer();
-            Actions.contact();
+            // Actions.contact();
     }
 
     onLogout() {

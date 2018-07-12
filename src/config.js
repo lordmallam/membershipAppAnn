@@ -8,8 +8,8 @@ const Config = {
   environmentAuthority: {
     couchdbUrl: `${dbHost}`, // CouchDB instance where environment_db resides.
     remoteDB: `${db_name}`,
-    apiUrl: `${host}:9001/api/`,
-    umsUrl: `${host}:9001/ums/`
+    apiUrl: `${host}/api/`,
+    umsUrl: `${host}/ums/`
   },
   db: {
     localDB_SystemData: 'sysData',

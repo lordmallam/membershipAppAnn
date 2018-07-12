@@ -137,7 +137,7 @@ const storeSysDataLocally = (db, user, dispatch) => {
     .then(() => {
       if(user.member){
         dispatch(setLoginUser(user));
-        Actions.main();
+        Actions.reset('main');
       } else {
         dispatch({ type: Types.LOGIN_FAILED, payload: 'Account not linked to a profile. Contact accounts@alliancefornewnigeria.org' });
       }      
